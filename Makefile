@@ -18,7 +18,7 @@ endif
 AR = ar rcs
 RM = rm -f
 # Fichiers sources et objets
-SRCS = libasm/ft_strlen.s #ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s
+SRCS = libasm/ft_strlen.s libasm/ft_strcpy.s libasm/ft_strcmp.s libasm/ft_write.s libasm/ft_read.s libasm/ft_strdup.s
 OBJS = $(SRCS:.s=.o)
 
 # Bonus

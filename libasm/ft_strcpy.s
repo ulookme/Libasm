@@ -1,6 +1,6 @@
 section .text
-global ft_strcpy
-ft_strcpy:
+global _ft_strcpy
+_ft_strcpy:
     xor rax, rax            ; Clear RAX to use as index
 .copy_loop:
     movzx rcx, byte [rsi + rax] ; Move byte from source to RCX

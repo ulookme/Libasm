@@ -1,6 +1,6 @@
 section .text
-global ft_strcmp
-ft_strcmp:
+global _ft_strcmp
+_ft_strcmp:
     xor rax, rax            ; Clear RAX for use as index
 .compare_loop:
     movzx rcx, byte [rdi + rax] ; Load byte from first string
