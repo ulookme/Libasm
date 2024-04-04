@@ -1,5 +1,5 @@
 section .text
-extern malloc
+extern _malloc
 extern _ft_strlen
 extern _ft_strcpy
 global _ft_strdup
@@ -8,7 +8,7 @@ _ft_strdup:
     call _ft_strlen          ; Get the length of the string
     inc rax                 ; Add space for the null terminator
     mov rdi, rax            ; Set size for malloc
-    call malloc             ; Allocate memory
+    call _malloc             ; Allocate memory
     test rax, rax           ; Check if malloc failed
     je .alloc_fail          ; Jump if allocation failed
     mov rdi, rax            ; Set destination for strcpy
