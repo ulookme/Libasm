@@ -51,5 +51,7 @@ fclean: clean
 # Règle pour recompiler
 re: fclean all
 
-# Éviter les conflits de noms de fichiers avec des cibles
+# Éviter les conflits de noms de fichiers avec des cibles 
 .PHONY: all clean fclean re bonus
+
+#compile gcc -g main.c -L. -lasm -o test_program
