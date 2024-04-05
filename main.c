@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <errno.h>
 
 // Déclarer les fonctions de votre bibliothèque
 size_t ft_strlen(const char *s);
@@ -18,6 +19,9 @@ int main() {
     char *str_dup;
     int fd;
     ssize_t bytes_read;
+
+    int ret = write(5675, "Hi", 2);
+    printf("Write ret: %d , Errno: %d\n", ret, errno);
 
     // Test ft_strlen
     printf("Length of \"%s\": %zu\n", str, ft_strlen(str));
